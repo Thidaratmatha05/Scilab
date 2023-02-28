@@ -1,0 +1,9 @@
+clc; clear; clf;
+function fx=Pretest(x, y)
+fx=(x+y)^2
+endfunction
+x=linspace(-5.0,5.0,100);
+y=linspace(-5.0,5.0,100);
+[X,Y] = meshgrid(x, y);
+Z= Pretest(X, Y);
+plot3d1(x, y, Z');

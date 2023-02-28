@@ -1,0 +1,4 @@
+clc; clear; clf;
+X = grand(1, 50, "uin", -5.0, 5.0);
+Y = grand(1, 50, "uin", -5.0, 5.0);
+plot(X, Y, 'o');

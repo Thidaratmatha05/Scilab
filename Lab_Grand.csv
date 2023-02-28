@@ -1,0 +1,66 @@
+clf()
+
+X = grand(1000, 1, 'nor', 1.0, 1.0);
+Y = grand(1000, 1, 'nor', 1.0, 1.0);
+subplot(3,3,1)
+plot(X, Y, 'ro')
+xtitle('normal Av=0.0, Sd=1.0');
+//mean Av (real) and standard deviation Sd (real >= 0)
+
+X1 = grand(1000, 1, 'unf', 0.0, 1.0);
+Y1 = grand(1000, 1, 'unf', 0.0, 1.0);
+subplot(3,3,2)
+plot(X1, Y1, 'bo')
+xtitle('uniform(unf) Low=0.0, High=1.0');
+//uniformly distributed in [Low, High)
+
+X2 = grand(1000, 1, 'uin', -3, 3);
+Y2 = grand(1000, 1, 'uin', -3, 3);
+subplot(3,3,3)
+plot(X2, Y2, 'go')
+xtitle('uniform(uin) Low=-3, High=3');
+//uniformly distributed between Low and High
+
+X3 = grand(1000, 1, 'bet', 0.5, 0.5);
+Y3 = grand(1000, 1, 'bet', 0.5, 0.5);
+subplot(3,3,4)
+plot(X3, Y3, 'r+')
+xtitle('beta(bet) A=0.5, B=0.5');
+//A and B The density of the beta distribution is (0 < x < 1)
+
+X4 = grand(1000, 1, 'exp', 0.5);
+Y4 = grand(1000, 1, 'exp', 0.5);
+subplot(3,3,5)
+plot(X4, Y4, 'b+')
+xtitle('exponential(exp) Av=0.5');
+//the exponential distribution with mean Av (real > 0.0)
+
+X5 = grand(1000, 1, 'chi', 0.5);
+Y5 = grand(1000, 1, 'chi', 0.5);
+subplot(3,3,6)
+plot(X5, Y5, 'g+')
+xtitle('chi-square(chi) Df=0.5');
+//the chi-square distribution with Df (real > 0.0)
+
+
+X6 = grand(1000, 1, 'poi', 1);
+Y6 = grand(1000, 1, 'poi', 1);
+subplot(3,3,7)
+plot(X6, Y6, 'ro')
+xtitle('Poisson(poi) mu=0.5');
+//the Poisson distribution with mean mu (real >= 0.0)
+
+X7 = grand(1000, 1, 'def');
+Y7 = grand(1000, 1, 'def');
+subplot(3,3,8)
+plot(X7, Y7, 'bo')
+xtitle('uniform(def)');
+//the uniform distribution over [0,1) (1 is never returned)
+
+X8 = grand(1000, 1, 'nch', 1.5, 0.5);
+Y8 = grand(1000, 1, 'nch', 1.5, 0.5);
+subplot(3,3,9)
+plot(X8, Y8, 'go')
+xtitle('non-central chi-square(nch) Df=1.5 Xnonc=0.5');
+//the non-central chisquare distribution with Df degrees of freedom (real >= 1.0) and noncentrality parameter Xnonc (real >= 0.0)
+

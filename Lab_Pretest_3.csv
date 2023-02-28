@@ -1,0 +1,6 @@
+A=grand(3,2,"uin",1,5);
+B=grand(3,2,"uin",1,5);
+C=A.*B;
+disp(A);
+disp(B);
+disp(C);

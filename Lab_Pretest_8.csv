@@ -1,0 +1,16 @@
+clc; clear all; clf;
+function fx=Pretest(x, y)
+fx1=(x+(2*y)-7)^2
+fx2=((2*x)+y-5)
+fx=fx1+fx2
+endfunction
+slt=[];
+for i=1:1000
+x=grand(1,1,'uin',-5.0, 5.0); 
+y=grand(1,1,'uin',-5.0, 5.0); 
+z = Pretest(x, y) 
+slt = [slt;[z x y]] 
+end 
+sort_slt = gsort(slt,'lr','i');
+disp(sort_slt(1,:));
+

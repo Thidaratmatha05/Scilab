@@ -1,0 +1,10 @@
+clc; clear;
+S=zeros(1,12);
+N=200;
+for i=1:N
+Y=grand(1,2,"unf",1,6);
+sY =sum(Y);
+S(1,sY) = S(1,sY)+1
+end
+disp(S/N);
+
